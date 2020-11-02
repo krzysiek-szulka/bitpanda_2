@@ -41,6 +41,11 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->bind(
+    \Infrastructure\Csv\Repository\TransactionRepository::class,
+    fn() => new \Infrastructure\Csv\Repository\TransactionRepository(getenv('CSV_DATA_SOURCE'))
+);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

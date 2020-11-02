@@ -1,0 +1,7 @@
+# IDE #
+/.idea/
+
+/vendor/
+/storage/
+.phpunit.result.cache
+
